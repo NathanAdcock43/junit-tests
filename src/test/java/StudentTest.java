@@ -21,12 +21,22 @@ public class StudentTest {
     }
 
     @Test
-    public void testGetName(){
-//        String
-        assertEquals("Codeup", Student.name("Codeup"));
-        assertEquals("Nate", Student.name("Nate"));
-        assertNotEquals("sam", Student.name("Sam"));
-        assertEquals("124", Student.name("124"));
+    public void testIfAddGradeWorks() {
+        Student nate = new Student(1L, "Nathan");
+        assertEquals(0, nate.getGrades().size());
+        nate.addGrade(82);
+        assertEquals(1, nate.getGrades().size());
+        nate.addGrade(89);
+        assertEquals(2, nate.getGrades().size());
+    }
+
+    @Test
+    public void testGetGradeWorks(){
+       Student nate = new Student(1L, "Nathan");
+        nate.addGrade(82);
+        nate.addGrade(89);
+        assertSame(82, nate.getGrades().get(0));
+        assertSame(89, nate.getGrades().get(1));
     }
 
     @Test

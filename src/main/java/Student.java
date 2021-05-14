@@ -36,7 +36,12 @@ public class Student {
 
     // returns the average of the students grades
     public double getGradeAverage(){
-        return ;
+
+        int bucket;
+        for (int i = 0 ; i < grades.size(); i++){
+            bucket = bucket + grades.get(i);
+        }
+        return bucket / grades.size();
     }
 
 }

@@ -40,21 +40,14 @@ public class StudentTest {
     }
 
     @Test
-    public void testGetGrades(){
-//        assertEquals("Codeup", Student.name("Codeup"));
-//        assertEquals("Nate", Student.name("Nate"));
-//        assertNotEquals("sam", Student.name("Sam"));
-//        assertEquals("124", Student.name("124"));
-//    }
-    }
-
-    @Test
     public void testGetGradeAverage(){
-//        assertEquals("Codeup", Student.name("Codeup"));
-//        assertEquals("Nate", Student.name("Nate"));
-//        assertNotEquals("sam", Student.name("Sam"));
-//        assertEquals("124", Student.name("124"));
-//    }
+         Student nate = new Student(1L, "Nathan");
+        nate.addGrade(82);
+        nate.addGrade(89);
+        assertEquals(85.5, nate.getGradeAverage(),0);
+        nate.addGrade(72);
+        assertEquals(81,nate.getGradeAverage(),0);
+    }
     }
 
 }

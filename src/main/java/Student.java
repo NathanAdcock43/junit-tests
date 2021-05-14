@@ -16,12 +16,12 @@ public class Student {
 
     // returns the student's id
     public long getId(){
-        return Student.id;
+        return this.id;
     }
 
     // returns the student's name
     public String getName(){
-        return Student.name;
+        return this.name;
     }
 
     // adds the given grade to the grades list

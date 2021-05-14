@@ -5,10 +5,19 @@ import static org.junit.Assert.*;
 public class StudentTest {
 
     @Test
-    public void testGetId(){
+    public void testIfStudentCanBeCreated() {
+        Student nate = new Student(1L, "Nathan");
+        Student nullStudent = null;
+        assertNotNull(nate);
+        assertNull(nullStudent);
+    }
+
+    @Test
+    public void testFieldsAreSet(){
 //        long
-        assertEquals(0, Student.id);
-        assertEquals(1, Student.id);
+        Student nate = new Student(1L, "Nathan");
+        assertEquals(1L, nate.getId());
+        assertEquals("Nathan", nate.getName());
     }
 
     @Test

@@ -5,24 +5,37 @@ import static org.junit.Assert.*;
 public class StudentTest {
 
     @Test
-    public void testIfVersionIsSet(){
-        assertEquals(0.0, CodeupCrypt.version, 0);
-        CodeupCrypt.version = 1.2;
-        assertEquals(1.2, CodeupCrypt.version, 0);
+    public void testGetId(){
+//        long
+        assertEquals(0, Student.id);
+        assertEquals(1, Student.id);
     }
 
     @Test
-    public void testHashPassword(){
-        assertEquals("C0d39p", CodeupCrypt.hashPassword("Codeup"));
-        assertEquals("F3r", CodeupCrypt.hashPassword("Fer"));
-        assertEquals("123", CodeupCrypt.hashPassword("123"));
-        assertEquals("124", CodeupCrypt.hashPassword("12a"));
+    public void testGetName(){
+//        String
+        assertEquals("Codeup", Student.name("Codeup"));
+        assertEquals("Nate", Student.name("Nate"));
+        assertNotEquals("sam", Student.name("Sam"));
+        assertEquals("124", Student.name("124"));
     }
 
     @Test
-    public void testCheckPassword(){
-        assertTrue("check password", CodeupCrypt.checkPassword("fer", "f3r"));
-        assertFalse("check password", CodeupCrypt.checkPassword("fer", "fer"));
+    public void testGetGrades(){
+//        assertEquals("Codeup", Student.name("Codeup"));
+//        assertEquals("Nate", Student.name("Nate"));
+//        assertNotEquals("sam", Student.name("Sam"));
+//        assertEquals("124", Student.name("124"));
+//    }
+    }
+
+    @Test
+    public void testGetGradeAverage(){
+//        assertEquals("Codeup", Student.name("Codeup"));
+//        assertEquals("Nate", Student.name("Nate"));
+//        assertNotEquals("sam", Student.name("Sam"));
+//        assertEquals("124", Student.name("124"));
+//    }
     }
 
 }

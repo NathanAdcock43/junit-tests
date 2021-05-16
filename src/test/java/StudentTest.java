@@ -45,7 +45,8 @@ public class StudentTest {
         nate.addGrade(82);
         nate.addGrade(89);
         assertEquals(85.5, nate.getGradeAverage(),0);
-        nate.addGrade(72);
+        nate.addGrade(78);
+        nate.addGrade(67);
         assertEquals(81,nate.getGradeAverage(),0);
     }
     }

@@ -29,10 +29,10 @@ public class Student {
     }
 
     public double getGradeAverage() {
-        double sum = 0;
+        double bucket = 0;
         for (int grade: this.grades) {
-            sum += grade;
+            bucket += grade;
         }
-        return sum / this.grades.size() ;
+        return bucket / this.grades.size() ;
     }
 }

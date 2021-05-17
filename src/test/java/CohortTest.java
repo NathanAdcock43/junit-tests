@@ -1,5 +1,3 @@
-public class CohortTest {
-
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -17,34 +15,34 @@ public class CohortTest {
         cohortWOne = new Cohort();
         cohortWMany = new Cohort();
 
-        Student fer = new Student(10L, "Fer");
-        Student david = new Student(20L, "David");
+        Student nate = new Student(10L, "Nathan");
+        Student tom = new Student(20L, "Tom");
 
-        fer.addGrade(100);
-        fer.addGrade(40);
+        nate.addGrade(89);
+        nate.addGrade(78);
 
-        david.addGrade(80);
-        david.addGrade(90);
-        cohortWOne.addStudent(fer);
-        cohortWMany.addStudent(fer);
-        cohortWMany.addStudent(david);
+        tom.addGrade(97);
+        tom.addGrade(92);
+        cohortWOne.addStudent(nate);
+        cohortWMany.addStudent(nate);
+        cohortWMany.addStudent(tom);
 
     }
 
     @Test
-    public void testIfAddStudentWorks(){
+    public void testAddStudent(){
         assertEquals(1, cohortWOne.getStudents().size());
         assertEquals(2, cohortWMany.getStudents().size());
     }
 
     @Test
-    public void testIfGetStudentsWork(){
+    public void testGetStudents(){
         assertEquals(10, cohortWMany.getStudents().get(0).getId());
         assertEquals(20, cohortWMany.getStudents().get(1).getId());
     }
 
     @Test
-    public void testIfCohortAvgWorks(){
+    public void testCohortAvg(){
         assertEquals(70, cohortWOne.getCohortAverage(), 0.5);
         assertEquals(77.5, cohortWMany.getCohortAverage(), 0.5);
     }

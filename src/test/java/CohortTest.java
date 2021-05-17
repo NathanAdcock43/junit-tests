@@ -43,8 +43,8 @@ public class CohortTest {
 
     @Test
     public void testCohortAvg(){
-        assertEquals(70, cohortWOne.getCohortAverage(), 0.5);
-        assertEquals(77.5, cohortWMany.getCohortAverage(), 0.5);
+        assertEquals(83.5, cohortWOne.getCohortAverage(), 0.5);
+        assertEquals(89, cohortWMany.getCohortAverage(), 0.5);
     }
 
 }

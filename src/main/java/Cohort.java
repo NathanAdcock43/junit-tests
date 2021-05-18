@@ -25,3 +25,16 @@ public class Cohort {
         return students;
     }
 }
+
+//scrapes names of movie files
+// cd "File location"
+//        while IFS= read -r -d $'\0' file; do
+//        duration=`mdls -name kMDItemDurationSeconds "$file" | cut -d "=" -f 2 `
+//        duration=`printf "%.2f" $duration;`
+//        codec=`mdls -name kMDItemCodecs "$file" | cut -d "=" -f 2`
+//        temp="$i) [$file] $duration"
+//        metaDataOutput=$metaDataOutput"\n"$temp
+//        i=$((i + 1))
+//        done < <(find .  \( -iname \*.m4v -o -iname \*.mov -o -iname \*.m4r -o -iname \*.m4a \)  -print0 )
+//
+//        echo -e  "\n[Report]\n"$metaDataOutput
